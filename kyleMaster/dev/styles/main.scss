@@ -1,0 +1,122 @@
+@import 'partials/setup';
+@import 'partials/variables';
+@import 'partials/header';
+@import 'partials/about';
+@import 'partials/skills';
+@import 'partials/projects';
+@import 'partials/contact';
+
+//General Styling
+
+.max-width{
+	max-width: 1400px;
+}
+
+.wrapper{
+	padding: 150px 0;
+	width: calc(100% - (1400px - 1120px));
+	margin: 0 auto;
+}
+
+.red-title-line{
+	width: 80px;
+	height: 5px;
+	background-color: $darkRed;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+h1{
+	margin:0
+}
+
+h2{
+	margin: 0;
+}
+
+section h2{
+	font-family: $titleFont;
+	font-size: 50px;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	span{
+		font-weight: 700;
+	}
+}
+
+header h2{
+	font-family: $baseFont;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+
+.section-title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 60px;
+	.red-title-line{
+		margin-top: 10px;
+	}
+}
+
+ul{
+	margin: 0;
+	li{
+		list-style: none;
+		padding: none;
+	}
+}
+
+footer{
+	padding: 15px 20px;
+	background-color: $darkRed;
+	color: white;
+	font-family: $baseFont;
+	text-align: center;
+}
+
+.dark-overlay{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0,0,0, 0.66);
+	z-index: 10;
+}
+
+.dark-overlay_on{
+	display: block;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.wrapper{
+		width: 85%;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.wrapper{
+		width: 90%;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	.section-title{
+		h2{
+			font-size: 35px;
+		}
+	}
+}

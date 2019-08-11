@@ -1,0 +1,148 @@
+//Header Styling
+header {
+  background-color: $darkRed;
+  .header-background {
+    padding: 55px 55px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../../../images/circuit-background.png);
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .name-title {
+    align-self: flex-start;
+  }
+  span {
+    display: block;
+    margin-top: -45px;
+  }
+  h1 {
+    color: white;
+    font-family: $titleFont;
+    font-size: 115px;
+    text-transform: uppercase;
+  }
+  .fa-chevron-down {
+    color: white;
+    font-size: 35px;
+    transition: all 0.5s;
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+}
+
+nav {
+  align-self: flex-end;
+  .nav-hamburger {
+    display: flex;
+    align-items: center;
+    i {
+      font-size: 35px;
+      color: white;
+      transition: all 0.5s;
+    }
+    &:hover i {
+      color: black;
+    }
+  }
+}
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+  padding: 20px 15px;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  transition: all 1s;
+  li {
+    font-family: $baseFont;
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    img {
+      border-radius: 200px;
+      border: 2px solid black;
+      margin-top: 20px;
+    }
+    &:hover a {
+      border-bottom: 3px solid $darkRed;
+    }
+  }
+  .nav-bar_close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 35px;
+    transition: all 0.5s;
+    &:hover {
+      color: $darkRed;
+    }
+  }
+}
+
+.nav-bar_open {
+  right: 0;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  header {
+    .header-background {
+      background-image: none;
+    }
+    .name-title {
+      align-self: center;
+      text-align: center;
+      h1 {
+        font-size: 90px;
+      }
+      span {
+        margin-top: -25px;
+      }
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  header {
+    .name-title {
+      h1 {
+        font-size: 60px;
+      }
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
+  .nav-bar {
+    right: -480px;
+    width: 100%;
+    justify-content: flex-end;
+    li {
+      font-size: 30px;
+    }
+    .nav-bar_close {
+      top: 20px;
+      left: 20px;
+      font-size: 40px;
+    }
+  }
+  .nav-bar_open {
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
